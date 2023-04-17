@@ -41,4 +41,23 @@ const messages = [
     "Believe in your ability to learn and grow, and you will achieve things you never thought possible."
 ]
 
-console.log(messages.length)
+const generateMessage = () => {
+    let message;
+    const randomNumber = Math.floor(Math.random() * messages.length);
+    message = messages.splice(randomNumber, 1);
+
+    const messageSpot = document.querySelector('.container-msg');
+    const button = document.querySelector('button');
+
+    messageSpot.innerHTML = message;
+    button.innerHTML = "Another one!";
+
+    if(messages.length == 0) {
+        button.style.display = "none";
+        messageSpot.innerHTML = "You have reached the last option! Reloading the page in 5 seconds...";
+
+        setTimeout(() => {
+            window.location.reload();
+        }, 5000);
+    }
+}
