@@ -6,7 +6,7 @@ A program designed to generate random messages for motivational purposes. This w
 
 - HTML & CSS
 - JavaScript
-- Chat GPT (generating the messages)
+- Chat GPT (gave me the mock for the messages hehe)
 
 ## Aspects Practiced
 
